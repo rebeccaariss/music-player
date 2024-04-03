@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -5,12 +7,23 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #c9ced3;
+  background: rgb(19, 19, 19);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: Spartan, sans-serif;
   font-size: 12px;
+}
+
+.player-container {
+  height: 500px;
+  /* Most smartphones have a screen width just over 400px, so in
+  general this width specification should fit without any media queries: */
+  width: 400px;
+  background-color: rgb(41, 41, 41);
+  border-radius: 20px;
+  /* to be adjusted: */
+  box-shadow: 0 15px 30px 5px rgba(152, 152, 152, 0.3);
 }
 
 .img-container {
