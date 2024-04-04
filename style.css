@@ -27,10 +27,24 @@ body {
 }
 
 .img-container {
-
+  height: 300px;
+  width: 300px;
   position: relative;
   top: -50px;
   left: 50px;
+}
+
+.img-container img {
+  /* height and width values correspond to the above
+  container dimensions */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  /* to be adjusted (in line with .player-container styles;
+  this one is slightly more subtle, so 5px vertical offset
+  instead of 15px): */
+  box-shadow: 0 5px 30px 5px rgba(152, 152, 152, 0.3);
 }
 
 h2 {
