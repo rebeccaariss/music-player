@@ -109,6 +109,11 @@ h3 {
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
+  .player-container {
+    /* this means there will be 2.5%vw margin on either side: */
+    width: 95vw;
+  }
+
   .img-container {
     left: 29px;
   }
