@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: rgb(19, 19, 19);
+  background: #c9ced3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,10 +20,9 @@ body {
   /* Most smartphones have a screen width just over 400px, so in
   general this width specification should fit without any media queries: */
   width: 400px;
-  background-color: rgb(41, 41, 41);
+  background: #e7e7e7;
   border-radius: 20px;
-  /* to be adjusted: */
-  box-shadow: 0 15px 30px 5px rgba(152, 152, 152, 0.3);
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
 }
 
 .img-container {
@@ -41,10 +40,7 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
-  /* to be adjusted (in line with .player-container styles;
-  this one is slightly more subtle, so 5px vertical offset
-  instead of 15px): */
-  box-shadow: 0 5px 30px 5px rgba(152, 152, 152, 0.3);
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
