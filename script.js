@@ -64,20 +64,22 @@ let songIndex = 0;
 
 // Previous Song
 function prevSong() {
-  if (songIndex >= 0) {
-    songIndex--;
-    loadSong(songs[songIndex]);
-    playSong();
+  if (songIndex < 0) {
+    songIndex = songs.length - 1; // goes to last song in array if user clicks
+    // "previous" from index 0 of the array
   }
+  loadSong(songs[songIndex]);
+  playSong();
 };
 
 // Next Song
 function nextSong() {
-  if (songIndex <= songs.length) {
-    songIndex++;
-    loadSong(songs[songIndex]);
-    playSong();
+  songIndex++;
+  if (songIndex > songs.length - 1) {
+    songIndex = 0; // goes back to first song if end of list is reached
   }
+  loadSong(songs[songIndex]);
+  playSong();
 };
 
 // On Load - Select First Song
