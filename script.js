@@ -64,6 +64,7 @@ let songIndex = 0;
 
 // Previous Song
 function prevSong() {
+  songIndex--;
   if (songIndex < 0) {
     songIndex = songs.length - 1; // goes to last song in array if user clicks
     // "previous" from index 0 of the array
