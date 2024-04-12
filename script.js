@@ -4,10 +4,15 @@
 const image = document.querySelector('img');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
-// querySelector here because we only have one audio element:
+// querySelector can be used here because we only have one audio element:
 const music = document.querySelector('audio');
 const progressContainer = document.getElementById('progress-container');
-const progress = document.getElementById('progress'); // progress indicator
+// progress indicator:
+const progress = document.getElementById('progress');
+// time indicators:
+const currentTime = document.getElementById('current-time');
+const duration = document.getElementById('duration');
+//
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
@@ -95,6 +100,12 @@ function updateProgressBar(e) {
     // Update progress bar width
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
+    // Calculate display for duration (duration is in seconds by default)
+    const durationMinutes = Math.floor(duration / 60);
+    let durationSeconds = Math.floor(duration % 60);
+    if (durationSeconds < 10) {
+      durationSeconds = `0${durationSeconds}`;
+    }
   }
 }
 
