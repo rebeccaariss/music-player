@@ -10,8 +10,8 @@ const progressContainer = document.getElementById('progress-container');
 // progress indicator:
 const progress = document.getElementById('progress');
 // time indicators:
-const currentTime = document.getElementById('current-time');
-const duration = document.getElementById('duration');
+const currentTimeEl = document.getElementById('current-time');
+const durationEl = document.getElementById('duration');
 //
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
@@ -105,6 +105,10 @@ function updateProgressBar(e) {
     let durationSeconds = Math.floor(duration % 60);
     if (durationSeconds < 10) {
       durationSeconds = `0${durationSeconds}`;
+    }
+    // Delay switching duration element to avoid NaN appearing on screen
+    if (durationSeconds) {
+      durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
     }
   }
 }
