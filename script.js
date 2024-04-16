@@ -126,7 +126,21 @@ function updateProgressBar(e) {
   }
 }
 
+// Set Progress Bar
+// (total width divided by the position we're at to get the percentage)
+function setProgressBar(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const { duration } = music; // "music" refers to the audio element, which is
+  // initialized as a new element for each audio file/track.
+
+  music.currentTime = (clickX / width) * duration; // click position (clickX)
+  // divided by progress bar width gives the position by percentage; multiplying
+  // by audio file duration gives the position value in seconds.
+};
+
 // Event Listeners
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
+progressContainer.addEventListener('click', setProgressBar);
