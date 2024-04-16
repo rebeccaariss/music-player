@@ -1,3 +1,6 @@
+## Demo
+ 🎶 [Click here](https://rebeccaariss.github.io/music-player/) for the demo and listen to some relaxing lofi beats  🎶
+
 ## Music
 All songs used in this project are royalty-free from [Uppbeat.io](https://uppbeat.io/):
 
